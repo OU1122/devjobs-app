@@ -1,3 +1,9 @@
+import { Filter } from "../components/filter";
+
 export default function Homepage() {
-	return <div>Homepage</div>;
+	return (
+		<>
+			<Filter />
+		</>
+	);
 }

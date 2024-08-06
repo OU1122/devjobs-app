@@ -11,7 +11,7 @@ export const Header = () => {
 					className="w-full h-full min-h-[136px] md:min-h-[162px] object-cover"></img>
 			</div>
 
-			<div className="max-w-[1100px] mx-auto py-12 flex justify-between items-center">
+			<div className="max-w-[1100px] mx-auto py-12 px-4 flex justify-between items-center">
 				<div>
 					<img src={logo}></img>
 				</div>
