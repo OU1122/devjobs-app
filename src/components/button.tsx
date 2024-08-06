@@ -5,6 +5,7 @@ type ButtonProps = {
 	children: React.ReactNode;
 	link?: string;
 	width?: "w-full";
+	theme?: "dark" | "light";
 };
 
 export const Button: React.FC<ButtonProps> = ({
@@ -12,13 +13,14 @@ export const Button: React.FC<ButtonProps> = ({
 	link,
 	children,
 	width,
+	theme,
 }) => {
 	if (link) {
 		return (
 			<div className="min-w-fit">
 				<Link to={link}>
 					<button
-						className="text-White bg-Violet rounded-lg px-6 py-2 hover:opacity-85"
+						className="text-White font-semibold bg-Violet rounded-lg px-6 py-2 hover:bg-LightViolet tracking-wide"
 						type={type}>
 						{children}
 					</button>
@@ -31,7 +33,19 @@ export const Button: React.FC<ButtonProps> = ({
 		return (
 			<div className={width}>
 				<button
-					className={`text-White bg-Violet rounded-lg px-6 py-2 hover:opacity-85 ${width}`}
+					className={`text-White font-semibold bg-Violet rounded-lg px-6 py-2 hover:bg-LightViolet tracking-wide ${width}`}
+					type={type}>
+					{children}
+				</button>
+			</div>
+		);
+	}
+
+	if (theme == "dark") {
+		return (
+			<div className="dark min-w-fit">
+				<button
+					className={`text-White font-semibold bg-[#303642] rounded-lg px-6 py-2 hover:bg-[#696E76] tracking-wide ${width}`}
 					type={type}>
 					{children}
 				</button>
@@ -42,7 +56,7 @@ export const Button: React.FC<ButtonProps> = ({
 	return (
 		<div className="min-w-fit">
 			<button
-				className="text-White bg-Violet rounded-lg px-6 py-2 hover:opacity-85"
+				className="text-White font-semibold bg-Violet rounded-lg px-6 py-2 hover:bg-LightViolet tracking-wide"
 				type={type}>
 				{children}
 			</button>
