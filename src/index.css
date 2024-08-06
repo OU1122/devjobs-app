@@ -9,3 +9,7 @@
 		font-family: Kumbh Sans, system-ui, sans-serif;
 	}
 }
+
+body {
+	@apply bg-[#F4F6F8];
+}
