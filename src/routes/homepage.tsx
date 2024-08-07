@@ -1,7 +1,9 @@
 import { Filter } from "../components/filter";
 import { JobCard } from "../components/jobCard";
+import jobs from "../library/data.json";
 
 export default function Homepage() {
+	console.log(jobs);
 	return (
 		<>
 			<Filter />

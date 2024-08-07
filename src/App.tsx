@@ -1,4 +1,5 @@
 import Homepage from "./routes/homepage";
+import JobDetail from "./routes/jobDetail";
 import { Layout } from "./routes/layout";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
@@ -11,6 +12,10 @@ function App() {
 				{
 					index: true,
 					element: <Homepage />,
+				},
+				{
+					path: "job/:jobId",
+					element: <JobDetail />,
 				},
 			],
 		},
