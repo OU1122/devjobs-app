@@ -4,7 +4,7 @@ import location from "../assets/desktop/icon-location.svg";
 
 export const Filter: React.FC = () => {
 	return (
-		<div className="max-w-[1110px] mx-auto flex items-center bg-White rounded-md shadow-md">
+		<div className="max-w-[1110px] mx-auto px-2 flex items-center bg-White rounded-md shadow-md">
 			<div className="px-4 py-4 w-[40%] border-r-[1px] border-Gray">
 				<form className="flex items-center gap-2">
 					<span>
