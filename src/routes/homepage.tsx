@@ -3,7 +3,17 @@ import { JobCard } from "../components/jobCard";
 import jobs from "../library/data.json";
 
 export default function Homepage() {
-	console.log(jobs);
+	// Function to split jobs into chunks of 3
+	/*     
+function splitJobs(jobs, numOfSplits){
+    const chunkOfJobs = [];
+
+    for (let i = 0; i < jobs.length; i += numOfSplits) {
+    
+    
+}
+ */
+
 	return (
 		<>
 			<Filter />
