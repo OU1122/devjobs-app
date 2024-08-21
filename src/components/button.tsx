@@ -20,7 +20,7 @@ export const Button: React.FC<ButtonProps> = ({
 			<div className="min-w-fit">
 				<Link to={link}>
 					<button
-						className="text-White font-semibold bg-Violet rounded-lg px-6 py-2 hover:bg-LightViolet tracking-wide"
+						className="text-White font-semibold bg-Violet rounded-lg px-6 py-3 hover:bg-LightViolet tracking-wide"
 						type={type}>
 						{children}
 					</button>

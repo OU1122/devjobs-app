@@ -2,6 +2,7 @@ import Homepage from "./routes/homepage";
 import JobDetail from "./routes/jobDetail";
 import { Layout } from "./routes/layout";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import jobData from "./library/data.json";
 
 function App() {
 	const router = createBrowserRouter([
@@ -15,7 +16,7 @@ function App() {
 				},
 				{
 					path: "job/:jobId",
-					element: <JobDetail />,
+					element: <JobDetail jobs={jobData} />,
 				},
 			],
 		},
