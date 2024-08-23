@@ -35,26 +35,44 @@ export default function JobDetail({ jobs }: JobDetailProps) {
 				</div>
 				<div className="max-w-[730px] mx-auto bg-White flex w-full rounded-lg py-11 px-10">
 					<div className="">
-						<div className="flex flex-col gap-1">
-							<div className="text-DarkGray text-base flex gap-2">
-								<p>{job.postedAt}</p> <span className="px-2">●</span>
-								<p>{job.contract}</p>
+						<div className="flex justify-between items-center">
+							<div className="flex flex-col gap-1">
+								<div className="text-DarkGray text-base flex gap-2">
+									<p>{job.postedAt}</p> <span className="px-2">●</span>
+									<p>{job.contract}</p>
+								</div>
+								<div>
+									<h2 className="font-bold text-[28px] text-VeryDarkBlue tracking-wide">
+										{job.position}
+									</h2>
+								</div>
+								<div>
+									<p className="font-bold text-Violet text-sm">
+										{job.location}
+									</p>
+								</div>
 							</div>
-							<div>
-								<h2 className="font-bold text-[28px] text-VeryDarkBlue tracking-wide">
-									{job.position}
-								</h2>
-							</div>
-							<div>
-								<p className="font-bold text-Violet text-sm">
-									{job.location}
-								</p>
-							</div>
+							<Button type="button">Apply Now</Button>
 						</div>
 						<div className="mt-8 text-DarkGray">
-							<p>{job.description}</p>
+							<p className="leading-relaxed">{job.description}</p>
 						</div>
-						<div></div>
+						<div className="leading-relaxed">
+							<h2 className="font-bold text-xl mt-8 mb-4">
+								Requirements
+							</h2>
+							<p className="text-DarkGray mb-4">
+								{job.requirements.content}
+							</p>
+
+							{job.requirements.items.map((item, i) => (
+								<li
+									className="text-DarkGray mb-2"
+									key={i}>
+									{item}
+								</li>
+							))}
+						</div>
 						<div></div>
 					</div>
 				</div>
