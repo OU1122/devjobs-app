@@ -64,16 +64,37 @@ export default function JobDetail({ jobs }: JobDetailProps) {
 							<p className="text-DarkGray mb-4">
 								{job.requirements.content}
 							</p>
-
-							{job.requirements.items.map((item, i) => (
-								<li
-									className="text-DarkGray mb-2"
-									key={i}>
-									{item}
-								</li>
-							))}
+							<ul className="list-disc">
+								{job.requirements.items &&
+									job.requirements.items.map((item, i) => (
+										<li
+											className="grid grid-cols-[auto_1fr] gap-8 text-DarkGray mb-2"
+											key={i}>
+											<span>⦿</span>
+											<span className="block">{item}</span>
+										</li>
+									))}
+							</ul>
 						</div>
-						<div></div>
+						<div className="leading-relaxed">
+							<h2 className="font-bold text-xl mt-8 mb-4">
+								What Will You Do
+							</h2>
+							<p className="text-DarkGray mb-4">{job.role.content}</p>
+							<ol className="list-decimal">
+								{job.role.items &&
+									job.role.items.map((item, i) => (
+										<li
+											className="grid grid-cols-[auto_1fr] gap-8 text-DarkGray mb-2"
+											key={i}>
+											<span className="text-Violet font-bold">
+												{i + 1}.
+											</span>
+											<span className="block">{item}</span>
+										</li>
+									))}
+							</ol>
+						</div>
 					</div>
 				</div>
 

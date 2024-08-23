@@ -27,6 +27,7 @@ export default function Homepage() {
 						className="flex flex-row justify-between">
 						{job.map((individualJob) => (
 							<Link
+								className="max-w-[350px] flex-1 h-full flex "
 								to={`job/${individualJob.id}`}
 								key={individualJob.id}>
 								<JobCard {...individualJob} />

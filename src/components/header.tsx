@@ -2,6 +2,7 @@ import bgHeader from "../assets/desktop/bg-pattern-header.svg";
 import logo from "../assets/desktop/logo.svg";
 import light from "../assets/desktop/icon-sun.svg";
 import dark from "../assets/desktop/icon-moon.svg";
+import { Link } from "react-router-dom";
 export const Header = () => {
 	return (
 		<div className="max-w-[1440px] mx-auto relative">
@@ -13,7 +14,9 @@ export const Header = () => {
 
 			<div className="max-w-[1100px] mx-auto py-12 px-4 flex justify-between items-center">
 				<div>
-					<img src={logo}></img>
+					<Link to="/">
+						<img src={logo}></img>
+					</Link>
 				</div>
 				<div className="toggle flex items-center justify-center gap-5">
 					<div>
