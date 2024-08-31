@@ -2,8 +2,15 @@ import { Link } from "react-router-dom";
 import { Filter } from "../components/filter";
 import { JobCard } from "../components/jobCard";
 import jobsData from "../library/data.json";
+import { useState } from "react";
 
 export default function Homepage() {
+	const [filteredJob, setFilteredJob] = useState({
+		keyword: "",
+		location: "",
+		fullTime: false,
+	});
+
 	// Function to split jobs into chunks of 3
 
 	function splitJobs(jobs, numOfSplits) {
@@ -19,7 +26,10 @@ export default function Homepage() {
 
 	return (
 		<>
-			<Filter />
+			<Filter
+				filteredJob={filteredJob}
+				setFilteredJob={setFilteredJob}
+			/>
 			<div className="max-w-[1110px] mx-auto px-2 mt-24 flex flex-col gap-16">
 				{splittedJobs.map((job, i) => (
 					<div
