@@ -9,7 +9,7 @@ export default function JobDetail({ jobs }: JobDetailProps) {
 
 	return (
 		<>
-			<main className="max-w-[1440px] mx-auto px-2 flex flex-col gap-16">
+			<main className="max-w-[1440px] mx-auto px-2 flex flex-col gap-16 pb-12">
 				<div className="max-w-[730px] mx-auto flex flex-row w-full">
 					<div
 						className="h-[174px] w-[174px] flex items-center justify-center rounded-bl-lg"
@@ -98,7 +98,23 @@ export default function JobDetail({ jobs }: JobDetailProps) {
 					</div>
 				</div>
 
-				<div className="w-full"></div>
+				<div className="w-full bg-White flex justify-center rounded-md shadow-sm">
+					<div className="max-w-[730px] flex items-center justify-between w-full py-5">
+						<div>
+							<div className="">
+								<h2 className="text-xl font-bold mb-2">
+									{job.position}
+								</h2>
+								<h3 className="text-[16px] text-DarkGray">
+									{job.company}
+								</h3>
+							</div>
+						</div>
+						<div>
+							<Button type="button">Apply Now</Button>
+						</div>
+					</div>
+				</div>
 			</main>
 		</>
 	);
