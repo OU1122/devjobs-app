@@ -6,7 +6,7 @@ export default function JobDetail({ jobs }: JobDetailProps) {
 	const { jobId } = useParams();
 
 	const job = jobs.find((job) => job.id === parseInt(jobId));
-	console.log(job);
+
 	return (
 		<>
 			<main className="max-w-[1440px] mx-auto px-2 flex flex-col gap-16">

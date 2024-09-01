@@ -22,7 +22,25 @@ export default function Homepage() {
 		return chunkOfJobs;
 	}
 
-	const splittedJobs = splitJobs(jobsData, 3);
+	const filteredJobs = jobsData.filter((job) => {
+		const matchesKeyword = job.position
+			.toLowerCase()
+			.includes(filteredJob.keyword.toLowerCase());
+
+		const matchesLocation = job.location
+			.toLowerCase()
+			.includes(filteredJob.location.toLowerCase());
+
+		const matchesFullTime = filteredJob.fullTime
+			? job.contract.toLowerCase() === "full time"
+			: true;
+
+		return matchesKeyword && matchesLocation && matchesFullTime;
+	});
+
+	const filteredAndSplittedJobs = splitJobs(filteredJobs, 3);
+
+	console.log(filteredJobs);
 
 	return (
 		<>
@@ -31,7 +49,7 @@ export default function Homepage() {
 				setFilteredJob={setFilteredJob}
 			/>
 			<div className="max-w-[1110px] mx-auto px-2 mt-24 flex flex-col gap-16">
-				{splittedJobs.map((job, i) => (
+				{filteredAndSplittedJobs.map((job, i) => (
 					<div
 						key={i}
 						className="flex flex-row justify-between">

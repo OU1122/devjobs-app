@@ -8,7 +8,11 @@ type FilterProps = {
 		location: string;
 		fullTime: boolean;
 	};
-	setFilteredJob: React.Dispatch<React.SetStateAction<string>>;
+	setFilteredJob: {
+		keyword: string;
+		location: string;
+		fullTime: boolean;
+	};
 };
 export const Filter: React.FC<FilterProps> = ({
 	filteredJob,
@@ -16,12 +20,13 @@ export const Filter: React.FC<FilterProps> = ({
 }) => {
 	const handleChange = (e) => {
 		const { name, type, value, checked } = e.target;
+
 		setFilteredJob((prev) => ({
 			...prev,
 			[name]: type === "checkbox" ? checked : value,
 		}));
 	};
-	console.log(filteredJob);
+
 	return (
 		<div className="max-w-[1110px] mx-auto px-2 flex items-center bg-White rounded-md shadow-md">
 			<div className="px-4 py-4 w-[40%] border-r-[1px] border-Gray">
