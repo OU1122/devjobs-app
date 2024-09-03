@@ -40,8 +40,6 @@ export default function Homepage() {
 
 	const filteredAndSplittedJobs = splitJobs(filteredJobs, 3);
 
-	console.log(filteredJobs);
-
 	return (
 		<>
 			<Filter
@@ -52,7 +50,7 @@ export default function Homepage() {
 				{filteredAndSplittedJobs.map((job, i) => (
 					<div
 						key={i}
-						className="flex flex-row justify-between">
+						className="grid grid-cols-3">
 						{job.map((individualJob) => (
 							<Link
 								className="max-w-[350px] flex-1 h-full flex "
