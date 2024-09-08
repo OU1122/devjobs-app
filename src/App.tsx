@@ -3,8 +3,13 @@ import JobDetail from "./routes/jobDetail";
 import { Layout } from "./routes/layout";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import jobData from "./library/data.json";
+import { useState } from "react";
+
+import { ThemeContext } from "./library/themeContext";
 
 function App() {
+	const [theme, setTheme] = useState("light");
+
 	const router = createBrowserRouter([
 		{
 			path: "/",
@@ -22,7 +27,11 @@ function App() {
 		},
 	]);
 
-	return <RouterProvider router={router} />;
+	return (
+		<ThemeContext.Provider value={{ theme, setTheme }}>
+			<RouterProvider router={router} />
+		</ThemeContext.Provider>
+	);
 }
 
 export default App;

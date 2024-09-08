@@ -46,7 +46,7 @@ export default function Homepage() {
 				filteredJob={filteredJob}
 				setFilteredJob={setFilteredJob}
 			/>
-			<div className="max-w-[1110px] mx-auto px-2 mt-24 flex flex-col gap-16">
+			<div className="max-w-[1110px] mx-auto px-2 mt-24 flex flex-col gap-16 ">
 				{filteredAndSplittedJobs.map((job, i) => (
 					<div
 						key={i}

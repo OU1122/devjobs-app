@@ -28,14 +28,14 @@ export const Filter: React.FC<FilterProps> = ({
 	};
 
 	return (
-		<div className="max-w-[1110px] mx-auto px-2 flex items-center bg-White rounded-md shadow-md">
-			<div className="px-4 py-4 w-[40%] border-r-[1px] border-Gray">
-				<form className="flex items-center gap-2">
+		<div className="max-w-[1110px] mx-auto px-2 flex items-center bg-White dark:bg-VeryDarkBlue rounded-md shadow-md">
+			<div className="px-4 py-4 w-[40%] border-r-[1px] border-Gray ">
+				<form className="flex items-center gap-2 ">
 					<span>
 						<img src={search}></img>
 					</span>
 					<input
-						className="w-full leading-10 px-2"
+						className="w-full leading-10 px-2 dark:bg-VeryDarkBlue"
 						value={filteredJob.keyword}
 						onChange={handleChange}
 						name="keyword"
@@ -55,7 +55,7 @@ export const Filter: React.FC<FilterProps> = ({
 						value={filteredJob.location}
 						onChange={handleChange}
 						placeholder="Filter by location..."
-						className="w-full leading-10 px-2"
+						className="w-full leading-10 px-2 dark:bg-VeryDarkBlue"
 					/>
 				</form>
 			</div>
@@ -71,7 +71,7 @@ export const Filter: React.FC<FilterProps> = ({
 							className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"></input>
 						<label
 							htmlFor="checked-checkbox"
-							className="ms-3 text-sm font-medium text-gray-900 dark:text-gray-300">
+							className="ms-3 text-sm font-medium text-gray-900 dark:text-White">
 							Full Time Only
 						</label>
 					</div>

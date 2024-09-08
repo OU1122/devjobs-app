@@ -8,8 +8,12 @@
 	html {
 		font-family: Kumbh Sans, system-ui, sans-serif;
 	}
-}
 
-body {
-	@apply bg-[#F4F6F8];
+	body {
+		@apply bg-[#F4F6F8];
+	}
+
+	.dark body {
+		@apply bg-[#121721];
+	}
 }
