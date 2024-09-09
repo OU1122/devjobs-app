@@ -12,7 +12,7 @@ export const JobCard: React.FC<BasicJobCardProps> = ({
 }) => {
 	return (
 		<div className="wrapper max-w-[350px] flex-1 h-full flex ">
-			<div className="relative bg-White  rounded-2xl p-8 shadow-sm flex-1 hover:cursor-pointer">
+			<div className="relative bg-White dark:bg-VeryDarkBlue  rounded-2xl p-8 shadow-sm flex-1 hover:cursor-pointer">
 				<div
 					style={{ backgroundColor: logoBackground }}
 					className="absolute top-0 left-8 -translate-y-7 w-[50px] h-[50px] rounded-lg flex items-center justify-center">
@@ -30,7 +30,7 @@ export const JobCard: React.FC<BasicJobCardProps> = ({
 							<p>{contract}</p>
 						</div>
 						<div>
-							<h2 className="font-bold text-xl text-VeryDarkBlue tracking-wide">
+							<h2 className="font-bold text-xl text-VeryDarkBlue dark:text-White tracking-wide">
 								{position}
 							</h2>
 						</div>
