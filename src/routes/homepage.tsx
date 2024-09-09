@@ -13,7 +13,7 @@ export default function Homepage() {
 
 	// Function to split jobs into chunks of 3
 
-	function splitJobs(jobs, numOfSplits) {
+	function splitJobs(jobs: any[], numOfSplits: number): any[][] {
 		const chunkOfJobs = [];
 
 		for (let i = 0; i < jobs.length; i += numOfSplits) {

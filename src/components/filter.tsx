@@ -8,17 +8,19 @@ type FilterProps = {
 		location: string;
 		fullTime: boolean;
 	};
-	setFilteredJob: {
-		keyword: string;
-		location: string;
-		fullTime: boolean;
-	};
+	setFilteredJob: React.Dispatch<
+		React.SetStateAction<{
+			keyword: string;
+			location: string;
+			fullTime: boolean;
+		}>
+	>;
 };
 export const Filter: React.FC<FilterProps> = ({
 	filteredJob,
 	setFilteredJob,
 }) => {
-	const handleChange = (e) => {
+	const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
 		const { name, type, value, checked } = e.target;
 
 		setFilteredJob((prev) => ({

@@ -13,7 +13,7 @@ export const Header = () => {
 	}
 	const { theme, setTheme } = themeContext;
 
-	const handleChange = (e) => {
+	const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
 		const checked = e.target.checked;
 		setTheme(checked ? "dark" : "light");
 	};

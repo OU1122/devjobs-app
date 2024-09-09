@@ -1,4 +1,4 @@
-export interface JobDetailProps {
+export interface Job {
 	id: number;
 	company: string;
 	logo: string;
@@ -20,9 +20,13 @@ export interface JobDetailProps {
 	};
 }
 
+export interface JobDetailProps {
+	jobs: Job[];
+}
+
 export interface BasicJobCardProps
 	extends Pick<
-		JobDetailProps,
+		Job,
 		| "id"
 		| "company"
 		| "logo"

@@ -5,7 +5,11 @@ import { Button } from "../components/button";
 export default function JobDetail({ jobs }: JobDetailProps) {
 	const { jobId } = useParams();
 
-	const job = jobs.find((job) => job.id === parseInt(jobId));
+	const job = jobs.find((job) => job.id === parseInt(jobId!));
+
+	if (!job) {
+		return <div>No jobs found</div>;
+	}
 
 	return (
 		<>
