@@ -8,6 +8,7 @@ export const JobCard: React.FC<BasicJobCardProps> = ({
 	postedAt,
 	contract,
 	location,
+	...otherProps
 }) => {
 	return (
 		<div className="wrapper max-w-[350px] flex-1 h-full flex ">
