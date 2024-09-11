@@ -1,4 +1,3 @@
-import { Button } from "./button";
 import search from "../assets/desktop/icon-search.svg";
 import location from "../assets/desktop/icon-location.svg";
 
