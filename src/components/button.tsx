@@ -56,7 +56,7 @@ export const Button: React.FC<ButtonProps> = ({
 	return (
 		<div className="min-w-fit">
 			<button
-				className="text-White font-semibold bg-Violet rounded-lg px-6 py-2 hover:bg-LightViolet tracking-wide"
+				className="text-White font-semibold bg-Violet rounded-lg px-6 py-2 hover:bg-LightViolet tracking-wide w-full"
 				type={type}>
 				{children}
 			</button>

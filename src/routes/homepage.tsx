@@ -50,10 +50,10 @@ export default function Homepage() {
 				{filteredAndSplittedJobs.map((job, i) => (
 					<div
 						key={i}
-						className="grid grid-cols-3">
+						className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-16 lg:gap-8">
 						{job.map((individualJob) => (
 							<Link
-								className="max-w-[350px] flex-1 h-full flex "
+								className="max-w-[350px] flex-1 w-full h-full flex mx-auto "
 								to={`job/${individualJob.id}`}
 								key={individualJob.id}>
 								<JobCard {...individualJob} />

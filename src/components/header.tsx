@@ -32,7 +32,7 @@ export const Header = () => {
 			<div className="absolute -z-10">
 				<img
 					src={bgHeader}
-					className="w-full h-full min-h-[136px] md:min-h-[162px] object-cover"></img>
+					className="w-full h-full min-h-[162px] object-cover"></img>
 			</div>
 
 			<div className="max-w-[1100px] mx-auto py-12 px-4 flex justify-between items-center">

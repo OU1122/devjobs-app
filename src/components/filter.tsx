@@ -30,7 +30,7 @@ export const Filter: React.FC<FilterProps> = ({
 	};
 
 	return (
-		<div className="max-w-[1110px] mx-auto px-2 flex items-center bg-White dark:bg-VeryDarkBlue rounded-md shadow-md">
+		<div className="max-w-[1110px] lg:mx-auto px-2 flex items-center bg-White dark:bg-VeryDarkBlue rounded-md shadow-md mx-[12px]">
 			<div className="px-4 py-4 w-[40%] border-r-[1px] border-Gray ">
 				<form className="flex items-center gap-2 ">
 					<span>
@@ -63,7 +63,7 @@ export const Filter: React.FC<FilterProps> = ({
 			</div>
 			<div className="w-[30%]">
 				<div className="flex items-center justify-around">
-					<div className="flex items-center">
+					<div className="flex items-center pl-4">
 						<input
 							id="checked-checkbox"
 							type="checkbox"
@@ -77,7 +77,6 @@ export const Filter: React.FC<FilterProps> = ({
 							Full Time Only
 						</label>
 					</div>
-					<Button type="button">Search</Button>
 				</div>
 			</div>
 		</div>
